@@ -1,0 +1,9 @@
+<h2><%= @task.title%></h2>
+<h4><%= @task.details %></h4>
+
+<h5><input type="checkbox" @task.completed> Is completed?</h5>
+
+
+<p><%= link_to "Back to list", tasks_path %></p>
+<p><%= link_to "Let's update a task", edit_path %></p>
+<p><i class="fa-solid fa-trash-can"></i><%= link_to " Delete this task", destroy_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?? sure-sure?"} %></p>
